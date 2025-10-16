@@ -168,7 +168,7 @@ To replicate this analysis, follow these steps:
 ***
   
 ## 📞 Contact Information
-* **Nitin Kumar Sharma**
+
 * **LinkedIn:** [https://www.linkedin.com/in/nitin-k-220651351/](https://www.linkedin.com/in/nitin-k-220651351/)
 * **GitHub:** [https://github.com/Nitinx12](https://github.com/Nitinx12)
 * **Email:** Nitin321x@gmail.com
