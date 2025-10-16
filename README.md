@@ -129,6 +129,23 @@ To replicate this analysis, follow these steps:
 4.  **Run Analysis:**
     * **For SQL Analysis:** Execute the queries in `HMS project FOR SQL.sql` using a SQL client like DBeaver or `psql`.
     * **For Python EDA:** Open and run the `Hospital_notebook.ipynb` Jupyter Notebook. Ensure you have the required libraries installed (`pip install pandas sqlalchemy notebook seaborn matplotlib duckdb`).
+
+## 📂 File Structure
+
+```
+├── Hospital_notebook.ipynb         # Jupyter Notebook with Python-based EDA and visualizations.
+├── HMS project FOR SQL.sql         # Contains all 16 advanced SQL queries for analysis.
+├── Load_data_into_PostgreSQL.py    # Python script to load CSV data into PostgreSQL.
+├── Questions for hospital.pdf      # The list of 16 business questions driving the analysis.
+├── appointments.csv                # Raw data file.
+├── billing.csv                     # Raw data file.
+├── doctors.csv                     # Raw data file.
+├── patients.csv                    # Raw data file.
+├── treatments.csv                  # Raw data file.
+└── README.md                       # You are here!
+```
+
+***
   
 ## 📞 Contact Information
 * **Nitin Kumar Sharma**
