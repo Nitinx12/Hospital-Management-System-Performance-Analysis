@@ -95,6 +95,26 @@ The analysis yielded several critical insights into the clinic's operations:
     `![Monthly Revenue](images/monthly_revenue.png)`
 
 ---
+Calculates the average time gap between consecutive visits for each patient.
+```sql
+WITH T1 AS(SELECT patient_id, appointment_date,
+			LAG(appointment_date, 1) OVER(PARTITION BY patient_id ORDER BY appointment_date) AS previous_date
+			FROM appointments
+			WHERE status = 'Completed'),
+
+T2 AS(SELECT patient_id,
+		appointment_date - previous_date AS days_between_visits
+		FROM T1
+		WHERE previous_date IS NOT NULL)
+
+SELECT CONCAT(P.first_name,' ',P.last_name) AS patient_name,
+FLOOR(AVG(T.days_between_visits)) AS avg_days_between_visits
+FROM T2 AS T
+JOIN patients AS P ON
+P.patient_id = T.patient_id
+GROUP BY P.patient_id, patient_name
+ORDER BY 2 DESC
+```
 
 ## 💡 Conclusion & Recommendations
 
